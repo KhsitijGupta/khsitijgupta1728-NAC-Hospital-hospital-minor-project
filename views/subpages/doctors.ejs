@@ -1,0 +1,61 @@
+<%- include("../layouts/header.ejs") %>
+
+<section>
+    <div class="toppanel">
+        <p><a href="/">Home</a>/ Doctors</p>
+        <div>
+            <h1> DOCTORS DESCRIPTION</h1>
+        </div>
+        <div class="finddoc">
+            <a href="http://localhost:3000/appoinment_form"><h3>Take an Appoinment</h3></a>
+        </div> 
+    </div>
+        <br><hr>
+        <div class="middle">
+            
+            <%for(doctor of alldoctors){%>
+            <div>
+                <a href="http://localhost:3000/docview/<%=doctor.id%>"><img src=<%=doctor.image%> alt="opp's ! Image not found"></a>
+                <a href="http://localhost:3000/docview/<%=doctor.id%>"><h2><%=doctor.doctors_name%></h2></a>
+                <a href="http://localhost:3000/docview/<%=doctor.id%>"><p><b>Masters in:</b> <%=doctor.qualifications%></p></a>
+                <a href="http://localhost:3000/docview/<%=doctor.id%>"><p><b>Speciality:</b><%=doctor.specialization%></p></a>
+                <br>
+                <span>
+                <a href="http://localhost:3000/docview/<%=doctor.id%>"><font size="2"><p><i class="fa-solid fa-user-doctor"></i> View full profile</p></font></a>
+                <a href="#"><font size="2"><p><i class="fa-regular fa-calendar-days"></i> Book a physical consultation</p></font></a>
+            
+                </span>
+                </div>
+            <%}%>
+             
+
+        </div>
+     
+        <div class="topup">
+            <a href="#topup">
+        <i class="fa-solid fa-up-long"></i>
+            </a>
+            
+        </div>
+        <div class="last">
+        <div class="reviewsheding">
+            <h2>Reviews From Our Patients</h2>
+        </div>
+        <div class="reviews">
+            
+            <div>
+                <i class="fa-solid fa-check-double"></i>
+                <p>I am very satisfied with treatment here at STAR Hospitals. The doctor was very patient and explained to me everything I asked. The staff members made me feel comfortable through my procedure and I am happy with the treatment and services here. Thank you</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-check-double"></i>
+                <p>Very good hospital. Easy to get appointment. Less crowd, more care and fast testing and perfect diagnosis. Consultation, tests, reports and its treatment will finish in one day if you visit hospital by 10 AM. All the doctors are good and you will never find any commercial angle of doctors and its staff.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-check-double"></i>
+                <p>Very effective service from the doctors and staff. Got good care from nurses and staff. Doctors are patient, address our concerns and give all needed precautions. I recommend all to select this hospital for not only good treatment but good care also.</p>
+            </div>
+        </div>
+        </div>
+</section>
+<%- include("../layouts/footer.ejs") %>

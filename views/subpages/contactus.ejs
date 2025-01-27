@@ -1,0 +1,54 @@
+<%- include("../layouts/header.ejs") %>
+<section>
+    <div class="toppanel">
+        <p><a href="/">Home</a> / Contact Us</p>
+        <div>
+            <h1> Contact Us</h1>
+        </div>
+        <div class="finddoc">
+            <a href="http://localhost:3000/doctors"><h3>Find a Docter</h3></a>
+            <a href="http://localhost:3000/appoinment_form"><h3>Take an Appoinment</h3></a>
+        </div>
+    </div>
+    <div class="conus">
+        <div>
+            <h1>National Health Center</h1>
+            <p>SY NO 52/2 & 52/3, Devarabeesanahalli, Varthur Hobli,</p>
+                <p>Bangalore- 560 103.</p>
+                <p>(Opp Intel, Outer Ring Road, Marathahalli)</p>
+                <br>
+                <p>
+                    Mobile   :   <i class="fa-solid fa-phone"></i>  <a href="">+91 1234567890</a>
+                </p>
+                <p>
+                    Feedback  : <i class="fa-solid fa-envelope"></i><a href="#"> info@nationalhealthcenter.com</a>
+                </p>
+                <p>
+                    International patients : <i class="fa-solid fa-envelope"></i><a href="#">intl.connect@nationalhealthcenter.com</a>
+                </p><br><br><hr><br>
+                <h3>Help us to know your Feedback :</h3>
+                <form action="http://localhost:3000/contact_us" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Name" required/><br>
+                    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="E-mail" required/><br>
+                    
+                    <label for="mobile">Mobile:</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Mobile" required pattern="[0-9]{10}"><br><br>
+                    
+                    <label for="description">Description:</label><br>
+                    <textarea id="description" name="description" cols="45" rows="7" placeholder="Description" required></textarea><br><br>
+                    
+                    <button type="submit">SUBMIT</button>
+        </div>
+        <div>
+            <img src="images/career.jpg" alt="opp's ! Image not found">
+            <br><br><br><br><br><br><br><br>
+            <img src="/images/map.png" alt="opp's ! Image not found">
+        </div>
+
+    </div>
+
+</section>
+<%- include("../layouts/footer.ejs") %>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NHC Hospital</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style> 
+    body{
+      background-color:rgba(250, 247, 243, 0.904);
+    }
+
+    .doctor-card {
+      margin-bottom: 20px;
+    }
+    .doctor-image {
+      max-height: 600px;
+      object-fit: cover;
+    }
+    
+
+  </style> 
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-5 mt-5">
+        <img src="<%=doctor.image%>" class="img-fluid doctor-image" alt="Doctor Image">
+        <h1 class="mt-5"><%= doctor.doctors_name %></h1>
+        <h5><strong>Qualifications:</strong> <%= doctor.qualifications %></h5>
+        <h5><strong>Specialization:</strong> <%= doctor.specialization %></h5>
+        <h5><strong>Bio:</strong> <%= doctor.bio %></h5>
+      </div>
+      <div class="col-md-7 mt-5">
+          <span class="mt-5">
+            <h1>Certification Details</h1>
+            <h5><strong>Position:</strong> <%= doctor.position %></h5>
+            <h5><strong>Institution:</strong> <%= doctor.institution %></h5>
+            <h5><strong>Certification Name:</strong> <%= doctor.certification_name %></h5>
+            <h5><strong>Date Awarded:</strong> <%= doctor.date_awarded.toDateString() %></h5>
+            <h5><strong>Expiration Date:</strong> <%= doctor.expiration_date.toDateString() %></h5>
+            <h5><strong>Start Date:</strong> <%= doctor.start_date.toDateString() %></h5>
+            <h5><strong>End Date:</strong> <%= doctor.end_date %></h5>
+            <h1>Personal Details</h1>
+          <h5><strong>Description:</strong> <%= doctor.description %></h5>
+          <h5><strong>Gender:</strong> <%= doctor.gender %></h5>
+          <h5><strong>Date of Birth:</strong> <%= doctor.date_of_birth %></h5>
+          <h5><strong>Contact:</strong> <%= doctor.contact_number %></h5>
+          <h5><strong>Email:</strong> <%= doctor.email %></h5>
+          <h5><strong>Address:</strong> <%= doctor.address %>, <%= doctor.city %>, <%= doctor.state %>, <%= doctor.postal_code %>, <%= doctor.country %></h5>
+          <h5><strong>Years of Experience:</strong> <%= doctor.years_of_experience %></h5>
+          <h5><strong>Education:</strong> <%= doctor.education %></h5>
+          <h5><strong>Hospital Affiliations:</strong> <%= doctor.hospital_affiliations %></h5>
+          <h5><strong>Languages Spoken:</strong> <%= doctor.languages_spoken %></h5>
+          <div>
+          <a href="/" class="btn btn-primary">Back to Directory</a>
+          <br><br><br><br>
+        </div>
+      </span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
