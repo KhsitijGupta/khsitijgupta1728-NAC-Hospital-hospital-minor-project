@@ -493,12 +493,6 @@ form {
 .home-button:hover {
    background-color: #45a049;
 }
-  /* Hide the main content by default */
-    body {
-        display: none;
-        text-align: center;
-        font-family: Arial, sans-serif;
-    }
 
     /* Dialog Box Styling */
     .dialog-box {
